@@ -1,0 +1,125 @@
+{
+  "weeks": [
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "SPEECH",
+          "exercise": 13,
+          "gender": "MALE",
+          "paired": false
+        }
+      ],
+      "date": "08-03-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 10,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 3,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 9,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "08-10-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 10,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 12,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 7,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "08-17-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 10,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 1,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 15,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "BIBLICAL_CLASS",
+          "exercise": 8,
+          "gender": "MALE",
+          "paired": true
+        }
+      ],
+      "date": "08-24-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 2,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 20,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "SPEECH",
+          "exercise": 19,
+          "gender": "MALE",
+          "paired": false
+        }
+      ],
+      "date": "08-31-2020"
+    }
+  ]
+}
