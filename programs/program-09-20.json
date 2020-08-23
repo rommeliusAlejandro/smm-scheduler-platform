@@ -1,0 +1,108 @@
+{
+  "weeks": [
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 1,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "SPEECH",
+          "exercise": 14,
+          "gender": "MALE",
+          "paired": false
+        }
+      ],
+      "date": "09-07-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 8,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 11,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "09-14-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 1,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 2,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "BIBLICAL_CLASS",
+          "exercise": 13,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "09-21-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 2,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "BIBLICAL_CLASS",
+          "exercise": 13,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "SPEECH",
+          "exercise": 20,
+          "gender": "MALE",
+          "paired": true
+        }
+      ],
+      "date": "09-28-2020"
+    }
+  ]
+}

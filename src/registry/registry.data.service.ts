@@ -70,11 +70,21 @@ export class RegistryDataService {
 
         return 0;
       });
-
-      let last: Date = new Date(sorted[0].date);
+      Logger.debug(`Has history ${participant.name}`);
+      Logger.debug(sorted);
+      let last: Date = new Date(sorted[sorted.length - 1].date);
       let lastMonth = last.getMonth()+1;
-      return month === lastMonth + 1;
+      Logger.debug(lastMonth);
 
+      if(month == lastMonth) {
+        return false;
+      }
+
+      if(month == lastMonth + 1) {
+        return false;
+      }
+
+      return true;
     });
   }
 

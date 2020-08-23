@@ -22,7 +22,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -58,7 +58,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"KID"
   },
@@ -85,7 +85,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -121,7 +121,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -139,7 +139,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -166,7 +166,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "08-04-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -175,7 +175,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-18-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -202,7 +202,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"SENIOR"
   },
@@ -211,7 +211,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -254,7 +254,7 @@
   {
     "name":"Bracamonte Cazón Eduardo",
     "gender":"MALE",
-    "active":true,
+    "active":false,
     "history":[
 
     ],
@@ -272,7 +272,7 @@
   {
     "name":"Bracamonte Cazón Gilberto",
     "gender":"MALE",
-    "active":true,
+    "active":false,
     "history":[
 
     ],
@@ -364,7 +364,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-18-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -391,14 +391,14 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-18-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
   {
     "name":"Carvajal Jackeline",
     "gender":"FEMALE",
-    "active":true,
+    "active":false,
     "history":[
 
     ],
@@ -416,7 +416,7 @@
   {
     "name":"Claros Vázquez Bertha",
     "gender":"FEMALE",
-    "active":true,
+    "active":false,
     "history":[
 
     ],
@@ -490,7 +490,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -499,7 +499,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-18-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -517,7 +517,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "08-04-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"SENIOR"
   },
@@ -526,14 +526,14 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
   {
     "name":"Guillén Vargas Augusto",
     "gender":"MALE",
-    "active":true,
+    "active":false,
     "history":[
       {"date":  "06-30-2020", "room":  "MAIN_ROOM"}
     ],
@@ -553,7 +553,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -589,7 +589,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -634,7 +634,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -643,7 +643,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"KID"
   },
@@ -661,7 +661,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -670,7 +670,7 @@
     "gender":"FEMALE",
     "active":false,
     "history":[
-
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"SENIOR"
   },
@@ -688,7 +688,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -715,7 +715,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -724,7 +724,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "07-28-2020", "room":  "MAIN_ROOM"}
+      {"date":  "07-28-2020", "room":  "MAIN_ROOM"},
+      {"date":  "08-18-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -733,7 +734,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -760,7 +761,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -769,7 +770,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -805,7 +806,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -814,7 +815,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-18-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"SENIOR"
   },
@@ -823,7 +824,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -832,7 +833,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -841,7 +842,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-18-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -886,7 +887,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"KID"
   },
@@ -895,7 +896,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -907,6 +908,15 @@
 
     ],
     "age":"SENIOR"
+  },
+  {
+    "name":"Noya Fernando",
+    "gender":"MALE",
+    "active":true,
+    "history":[
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
+    ],
+    "age":"ADULT"
   },
   {
     "name":"Olmos Araoz Belba",
@@ -931,7 +941,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -958,7 +968,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -976,7 +986,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -1003,7 +1013,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "07-14-2020", "room":  "MAIN_ROOM"}
+      {"date":  "07-14-2020", "room":  "MAIN_ROOM"},
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -1021,7 +1032,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-18-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -1030,7 +1041,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -1075,7 +1086,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"SENIOR"
   },
@@ -1084,7 +1095,8 @@
     "gender":"MALE",
     "active":true,
     "history":[
-      {"date":  "06-16-2020", "room":  "MAIN_ROOM"}
+      {"date":  "06-16-2020", "room":  "MAIN_ROOM"},
+      {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -1156,7 +1168,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "06-09-2020", "room":  "MAIN_ROOM"}
+      {"date":  "06-09-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },

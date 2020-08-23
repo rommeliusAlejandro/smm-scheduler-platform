@@ -20,11 +20,11 @@ export class ScheduleBuilderService {
     const response = new ScheduleResponseType();
     response.weeks = [];
     response.success = false;
-
+    Logger.debug(monthCandidates);
     for (let w of input.weeks) {
       let week: Week = { date: w.date, rooms: [] };
       let mainRoom: Room = { roomId: 'MAIN_ROOM', participant: [] };
-      let auxRoom: Room = { roomId: 'AUX_ROOM_1', participant: [] };
+      //let auxRoom: Room = { roomId: 'AUX_ROOM_1', participant: [] };
 
       for (let t of w.tasks) {
         let gender = monthCandidates.filter(candidate => candidate.gender === t.gender);
@@ -54,10 +54,10 @@ export class ScheduleBuilderService {
           monthCandidates = monthCandidates.filter(candidate => candidate.name != gender[2].name && candidate.name != gender[3].name);
         }
         mainRoom.participant.push(newParticipantMain);
-        auxRoom.participant.push(newParticipantAux);
+        //auxRoom.participant.push(newParticipantAux);
       }
 
-      week.rooms.push(mainRoom, auxRoom);
+      week.rooms.push(mainRoom);
       response.weeks.push(week);
     }
 
