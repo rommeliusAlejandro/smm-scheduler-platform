@@ -1,0 +1,108 @@
+{
+  "weeks": [
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 10,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 9,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "SPEECH",
+          "exercise": 7,
+          "gender": "MALE",
+          "paired": false
+        }
+      ],
+      "date": "10-05-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 10,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 16,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 8,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "10-12-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 11,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 11,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 4,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "BIBLICAL_CLASS",
+          "exercise": 19,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "10-19-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 3,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 12,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "BIBLICAL_CLASS",
+          "exercise": 7,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "10-26-2020"
+    }
+  ]
+}

@@ -6,7 +6,12 @@
     "history":[
 
     ],
-    "age":"ADULT"
+    "age":"ADULT",
+    "skills": {
+      "FIRST_TALK": 2,
+      "FIRST_VISIT": 2,
+      "BIBLICAL_CLASS": 2
+    }
   },
   {
     "name":"Almanza Gutierrez Tomás ",
@@ -15,7 +20,12 @@
     "history":[
 
     ],
-    "age":"ADULT"
+    "age":"ADULT",
+    "skills": {
+      "READING": 1,
+      "SPEECH": 3,
+      "BIBLICAL_CLASS": 2
+    }
   },
   {
     "name":"Almanza Balderrama Susca ",
@@ -24,7 +34,12 @@
     "history":[
       {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
     ],
-    "age":"ADULT"
+    "age":"ADULT",
+    "skills": {
+      "FIRST_TALK": 2,
+      "FIRST_VISIT": 2,
+      "BIBLICAL_CLASS": 2
+    }
   },
   {
     "name":"Angulo Acha Ana  de",
@@ -33,7 +48,12 @@
     "history":[
 
     ],
-    "age":"ADULT"
+    "age":"ADULT",
+    "skills": {
+      "FIRST_TALK": 2,
+      "FIRST_VISIT": 2,
+      "BIBLICAL_CLASS": 2
+    }
   },
   {
     "name":"Angulo Bermudez Miguel ",
@@ -47,7 +67,7 @@
   {
     "name":"Anivarro Valda Francis",
     "gender":"FAMALE",
-    "active":true,
+    "active":false,
     "history":[
 
     ],
@@ -60,7 +80,11 @@
     "history":[
       {"date":  "08-25-2020", "room":  "MAIN_ROOM"}
     ],
-    "age":"KID"
+    "age":"KID",
+    "skills": {
+      "FIRST_TALK": 2,
+      "FIRST_VISIT": 2
+    }
   },
   {
     "name":"Arancibia Reyes Abner",
@@ -74,11 +98,14 @@
   {
     "name":"Arancibia Reyes Wilder",
     "gender":"MALE",
-    "active":false,
+    "active":true,
     "history":[
 
     ],
-    "age":"ADULT"
+    "age":"ADULT",
+    "skills": {
+      "READING": 3
+    }
   },
   {
     "name":"Arancibia Rosmary Vargas de",
@@ -94,7 +121,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-08-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"KID"
   },
@@ -193,7 +220,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "09-08-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -247,7 +274,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "07-21-2020", "room":  "MAIN_ROOM"}
+      {"date":  "07-21-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-15-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -265,7 +293,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "09-22-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"SENIOR"
   },
@@ -301,7 +329,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "07-21-2020", "room":  "MAIN_ROOM"}
+      {"date":  "07-21-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-29-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -355,7 +384,8 @@
     "gender":"MALE",
     "active":true,
     "history":[
-      {"date":  "07-28-2020", "room":  "MAIN_ROOM"}
+      {"date":  "07-28-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-29-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -373,7 +403,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "06-16-2020", "room":  "MAIN_ROOM"}
+      {"date":  "06-16-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-15-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"KID"
   },
@@ -461,7 +492,7 @@
   {
     "name":"Escobar Martha Mendoza de",
     "gender":"FEMALE",
-    "active":true,
+    "active":false,
     "history":[
 
     ],
@@ -481,7 +512,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "07-07-2020", "room":  "MAIN_ROOM"}
+      {"date":  "07-07-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-22-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -562,7 +594,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "07-21-2020", "room":  "MAIN_ROOM"}
+      {"date":  "07-21-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-22-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -598,7 +631,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "06-23-2020", "room":  "MAIN_ROOM"}
+      {"date":  "06-23-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-08-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -607,7 +641,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "06-30-2020", "room":  "MAIN_ROOM"}
+      {"date":  "06-30-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-29-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -616,7 +651,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "06-30-2020", "room":  "MAIN_ROOM"}
+      {"date":  "06-30-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-15-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"SENIOR"
   },
@@ -734,7 +770,8 @@
     "gender":"MALE",
     "active":true,
     "history":[
-      {"date":  "09-01-2020", "room":  "MAIN_ROOM"}
+      {"date":  "09-01-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-15-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -752,7 +789,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "07-14-2020", "room":  "MAIN_ROOM"}
+      {"date":  "07-14-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-22-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"SENIOR"
   },
@@ -860,7 +898,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-22-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -878,7 +916,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-22-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"KID"
   },
@@ -932,7 +970,7 @@
     "gender":"MALE",
     "active":true,
     "history":[
-
+      {"date":  "09-29-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -1019,11 +1057,19 @@
     "age":"ADULT"
   },
   {
+    "name":"Rivero Rico Ana",
+    "gender":"FEMALE",
+    "active":true,
+    "history":[
+    ],
+    "age":"ADULT"
+  },
+  {
     "name":"Rocabado Zambrana Dayana de",
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-29-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -1041,7 +1087,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "08-11-2020", "room":  "MAIN_ROOM"}
+      {"date":  "08-11-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-08-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -1068,7 +1115,7 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-
+      {"date":  "09-29-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"SENIOR"
   },
@@ -1123,7 +1170,8 @@
     "gender":"FEMALE",
     "active":true,
     "history":[
-      {"date":  "06-16-2020", "room":  "MAIN_ROOM"}
+      {"date":  "06-16-2020", "room":  "MAIN_ROOM"},
+      {"date":  "09-08-2020", "room":  "MAIN_ROOM"}
     ],
     "age":"ADULT"
   },
@@ -1157,7 +1205,7 @@
   {
     "name":"Villarroel Maritza Gumuzio de",
     "gender":"FEMALE",
-    "active":true,
+    "active":false,
     "history":[
 
     ],

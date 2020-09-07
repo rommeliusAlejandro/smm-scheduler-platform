@@ -7,6 +7,7 @@ import { Participant, Room, ScheduleResponseType, Week } from '@smm/schedule/sch
 import { RegistryDataService } from '@smm/registry/registry.data.service';
 import { Observable, of } from 'rxjs';
 import { take } from 'rxjs/operators';
+import { shuffle } from '@smm/framework/arrays/suffle.array';
 
 @Injectable()
 export class ScheduleBuilderService {
@@ -17,6 +18,7 @@ export class ScheduleBuilderService {
   createSchedule(input: ScheduleRequestType, month: number): Observable<ScheduleResponseType> {
 
     let monthCandidates = this.registryService.findMonthCandidates(month);
+    monthCandidates = shuffle(monthCandidates);
     const response = new ScheduleResponseType();
     response.weeks = [];
     response.success = false;
@@ -34,7 +36,7 @@ export class ScheduleBuilderService {
         }
 
         let newParticipantMain: Participant = { task: t.name, exercise: t.exercise };
-        let newParticipantAux: Participant = { task: t.name, exercise: t.exercise };
+        //let newParticipantAux: Participant = { task: t.name, exercise: t.exercise };
 
         if (4 > gender.length && t.paired) {
           throw new Error(`Not enough participants for ${t.name} - ${w.date}`);
@@ -45,11 +47,11 @@ export class ScheduleBuilderService {
         monthCandidates = monthCandidates.filter(candidate => candidate.name != main1.name && candidate.name != main2.name);
 
         newParticipantMain.mainName = main1.name;
-        newParticipantAux.mainName = main2.name;
+        //newParticipantAux.mainName = main2.name;
 
         if (t.paired) {
           newParticipantMain.helperName = gender[2].name;
-          newParticipantAux.helperName = gender[3].name;
+          //newParticipantAux.helperName = gender[3].name;
 
           monthCandidates = monthCandidates.filter(candidate => candidate.name != gender[2].name && candidate.name != gender[3].name);
         }
