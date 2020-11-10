@@ -1,0 +1,137 @@
+{
+  "weeks": [
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 12,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "SPEECH",
+          "exercise": 14,
+          "gender": "MALE",
+          "paired": false
+        }
+      ],
+      "date": "11-03-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 10,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 2,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 11,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "11-10-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 12,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 4,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "BIBLICAL_CLASS",
+          "exercise": 19,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "11-17-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 3,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 11,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "BIBLICAL_CLASS",
+          "exercise": 6,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "11-24-2020"
+    },
+    {
+      "tasks": [
+        {
+          "name": "READING",
+          "exercise": 5,
+          "gender": "MALE",
+          "paired": false
+        },
+        {
+          "name": "FIRST_TALK",
+          "exercise": 6,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "FIRST_VISIT",
+          "exercise": 6,
+          "gender": "FEMALE",
+          "paired": true
+        },
+        {
+          "name": "BIBLICAL_CLASS",
+          "exercise": 11,
+          "gender": "FEMALE",
+          "paired": true
+        }
+      ],
+      "date": "12-01-2020"
+    }
+  ]
+}
