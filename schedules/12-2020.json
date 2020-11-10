@@ -1,0 +1,124 @@
+{
+  "weeks": [
+    {
+      "date": "12-07-2020",
+      "rooms": [
+        {
+          "roomId": "MAIN_ROOM",
+          "participant": [
+            {
+              "task": "READING",
+              "exercise": 10,
+              "mainName": "Olmos Leandro"
+            },
+            {
+              "task": "FIRST_TALK",
+              "exercise": 20,
+              "mainName": "Cabrera Encinas  Silvia de",
+              "helperName": "Guillén Roxana Guzmán de"
+            },
+            {
+              "task": "SPEECH",
+              "exercise": 12,
+              "mainName": "Reyes Aguilar Arturo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "12-14-2020",
+      "rooms": [
+        {
+          "roomId": "MAIN_ROOM",
+          "participant": [
+            {
+              "task": "READING",
+              "exercise": 5,
+              "mainName": "Arancibia Reyes Abner"
+            },
+            {
+              "task": "FIRST_VISIT",
+              "exercise": 19,
+              "mainName": "Rocha María René Salas de",
+              "helperName": "Guillen Cevallos Mayte"
+            },
+            {
+              "task": "FIRST_VISIT",
+              "exercise": 9,
+              "mainName": "Raffo Eva Lara de",
+              "helperName": "Lazarte Barco Patricia "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "12-21-2020",
+      "rooms": [
+        {
+          "roomId": "MAIN_ROOM",
+          "participant": [
+            {
+              "task": "READING",
+              "exercise": 5,
+              "mainName": "Loayza  Lara Rommel Alejandro"
+            },
+            {
+              "task": "FIRST_TALK",
+              "exercise": 16,
+              "mainName": "Zecca Quillaguaman  Nicole",
+              "helperName": "Romero Betsy  Perez de"
+            },
+            {
+              "task": "FIRST_VISIT",
+              "exercise": 11,
+              "mainName": "Guillen Cevallos  Celia de",
+              "helperName": "Mamio Camacho Julia"
+            },
+            {
+              "task": "BIBLICAL_CLASS",
+              "exercise": 19,
+              "mainName": "Arévalo Terrazas Walter",
+              "helperName": "Bracamonte Cazón Freddy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "12-28-2020",
+      "rooms": [
+        {
+          "roomId": "MAIN_ROOM",
+          "participant": [
+            {
+              "task": "READING",
+              "exercise": 5,
+              "mainName": "Torrico Ágreda David"
+            },
+            {
+              "task": "FIRST_TALK",
+              "exercise": 3,
+              "mainName": "Navarro Zárate Ninfa",
+              "helperName": "Arancibia Rosmary Vargas de"
+            },
+            {
+              "task": "FIRST_VISIT",
+              "exercise": 4,
+              "mainName": "Canedo Michelle",
+              "helperName": "Navarro  Zarate Bruna"
+            },
+            {
+              "task": "BIBLICAL_CLASS",
+              "exercise": 14,
+              "mainName": "Almanza Balderrama Susca ",
+              "helperName": "Meruvia Claudia"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "success": true
+}
