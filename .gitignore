@@ -35,3 +35,7 @@ lerna-debug.log*
 
 *.xlsx
 *.xls
+
+data.json
+/schedules
+/programs

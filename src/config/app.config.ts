@@ -7,4 +7,5 @@ import { APPLICATION_CONFIG } from './constants';
 export default registerAs(APPLICATION_CONFIG, () => ({
   port: process.env.PORT || '3000',
   data: process.env.DATA,
+  createData: process.env.CREATE_DATA || false
 }));

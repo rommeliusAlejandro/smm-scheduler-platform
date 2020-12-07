@@ -5,6 +5,7 @@ export class Participants {
   participants: Participant[];
 }
 export class Participant {
+  id: string;
   name: string;
   gender: string;
   active : boolean;
