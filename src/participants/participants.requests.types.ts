@@ -26,3 +26,8 @@ export class UpdateParticipantRequests {
   @ApiProperty()
   attributes: {[key: string]: string | boolean};
 }
+
+export class LogHistoryRequest {
+  date: Date;
+  room: string;
+}

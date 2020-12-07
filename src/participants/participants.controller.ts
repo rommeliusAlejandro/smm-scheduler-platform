@@ -5,7 +5,11 @@ import { Body, Controller, Get, Inject, Param, Post, Put } from '@nestjs/common'
 import { Observable } from 'rxjs';
 import { Participant } from '@smm/participants/schemas/participant.schema';
 import { ParticipantsService } from '@smm/participants/participants.service';
-import { CreateParticipantRequest, UpdateParticipantRequests } from '@smm/participants/participants.requests.types';
+import {
+  CreateParticipantRequest,
+  LogHistoryRequest,
+  UpdateParticipantRequests,
+} from '@smm/participants/participants.requests.types';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Participants Controller')
@@ -40,6 +44,12 @@ export class ParticipantsController {
   update(@Param('id') id: string,
          @Body() updatedParticipant: UpdateParticipantRequests): Observable<Participant> {
     return this.participantsService.update(id, updatedParticipant.attributes);
+  }
+
+  @Put(':id/logHistory')
+  logHistory(@Param('id') id: string,
+             @Body() history: LogHistoryRequest): Observable<Participant> {
+    return this.participantsService.logHistory(id, history);
   }
 
 }
