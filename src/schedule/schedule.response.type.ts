@@ -28,7 +28,7 @@ export class Room {
   roomId: string;
 
   @ApiProperty({type: () => Participant})
-  participant: Participant[];
+  participants: Participant[];
 }
 
 export class Participant {

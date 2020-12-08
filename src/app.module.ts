@@ -10,6 +10,7 @@ import { ReportModule } from '@smm/report/report.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ParticipantsModule } from '@smm/participants/participants.module';
 import { ProgramsModule } from '@smm/programs/programs.module';
+import { MonthlyProgramsModule } from '@smm/monthly-programs/monthly-programs.module';
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { ProgramsModule } from '@smm/programs/programs.module';
     RegistryModule,
     ReportModule,
     ParticipantsModule,
-    ProgramsModule
+    ProgramsModule,
+    MonthlyProgramsModule
   ],
   controllers: [AppController],
   providers: [AppService, AppConfigFactory],

@@ -54,7 +54,7 @@ export class ReportBuilder {
         ws.cell(pivot + 1, rCool).string(ReportFormats[room.roomId]).style(label);
         let pRow = pivot + 2;
 
-        for (let task of room.participant) {
+        for (let task of room.participants) {
           ws.cell(pRow, rCool).string(ReportFormats[task.task]).style(participant);
           ws.cell(pRow, rCool + 1).string(task.mainName).style(participant);
           ws.cell(pRow, rCool + 2).number(task.exercise).style(participant);

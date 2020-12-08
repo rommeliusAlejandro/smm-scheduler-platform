@@ -32,7 +32,7 @@ export class ScheduleBuilderService {
       Logger.debug(monthCandidates);
       for (let w of input.weeks) {
         let week: Week = { date: w.date, rooms: [] };
-        let mainRoom: Room = { roomId: 'MAIN_ROOM', participant: [] };
+        let mainRoom: Room = { roomId: 'MAIN_ROOM', participants: [] };
         //let auxRoom: Room = { roomId: 'AUX_ROOM_1', participant: [] };
 
         for (let t of w.tasks) {
@@ -62,7 +62,7 @@ export class ScheduleBuilderService {
 
             monthCandidates = monthCandidates.filter(candidate => candidate.name != gender[2].name && candidate.name != gender[3].name);
           }
-          mainRoom.participant.push(newParticipantMain);
+          mainRoom.participants.push(newParticipantMain);
           //auxRoom.participant.push(newParticipantAux);
         }
 

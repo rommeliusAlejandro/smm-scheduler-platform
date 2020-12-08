@@ -55,7 +55,7 @@ export class RegistryDataService {
         return false;
       }
 
-      if (0 === participant.history.length) {
+      if (!participant.history || 0 === participant.history.length) {
         return true;
       }
 
