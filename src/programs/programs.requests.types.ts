@@ -7,6 +7,13 @@ import { ApiProperty } from '@nestjs/swagger';
 export class NewProgramRequest {
   @ApiProperty({ type: () => [WeekProgram]})
   weeks: WeekProgram[];
+
+  @ApiProperty()
+  year: number;
+
+  @ApiProperty()
+  month: number;
+
 }
 
 export class WeekProgram {

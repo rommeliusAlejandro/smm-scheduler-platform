@@ -14,10 +14,8 @@ export class ProgramsService {
   constructor(@InjectModel(Program.name) private readonly programModel: Model<ProgramDocument>) {
   }
 
-  create(program: any, year: number, month: number): Observable<Program> {
+  create(program: any): Observable<Program> {
     program['id'] = uuidv4();
-    program['year'] = year;
-    program['month'] = month;
     const newProgram = new this.programModel(program);
 
     return from(newProgram.save());

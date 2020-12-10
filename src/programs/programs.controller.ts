@@ -26,10 +26,8 @@ export class ProgramsController {
     return this.programsService.getBy(field, value);
   }
 
-  @Post('/:year/:month')
-  create(@Body() newProgram: NewProgramRequest,
-         @Param('year') year: number,
-         @Param('month') month: number): Observable<Program> {
-    return this.programsService.create(newProgram, year, month);
+  @Post()
+  create(@Body() newProgram: NewProgramRequest): Observable<Program> {
+    return this.programsService.create(newProgram);
   }
 }
