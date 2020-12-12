@@ -32,6 +32,15 @@ export class MonthlyProgram {
   @Prop({required: true})
   id: string;
 
+  @Prop({required: true})
+  name: string;
+
+  @Prop()
+  mainId: string;
+
+  @Prop()
+  helperId: string;
+
   @Prop({type: Week})
   weeks: Week[];
 

@@ -7,6 +7,7 @@ import { Model } from 'mongoose';
 import { Program, ProgramDocument } from '@smm/programs/schemas/program.schema';
 import { from, Observable } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
+import { Participant } from '@smm/participants/schemas/participant.schema';
 
 @Injectable()
 export class ProgramsService {
@@ -34,6 +35,12 @@ export class ProgramsService {
     search[field] = value;
     return from(
       this.programModel.find(search).exec(),
+    );
+  }
+
+  update(id: string, attributes: any): Observable<Program> {
+    return from(
+      this.programModel.findOneAndUpdate({ id: id }, attributes, { new: true }),
     );
   }
 

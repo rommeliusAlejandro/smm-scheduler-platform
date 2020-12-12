@@ -5,10 +5,11 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from "mongoose";
-import { from, Observable } from 'rxjs';
+import { from, Observable, throwError } from 'rxjs';
 import { MonthlyProgram, MonthlyProgramDocument } from '@smm/monthly-programs/schemas/monthly-program.schema';
 import { v4 as uuidv4 } from 'uuid';
 import { ProgramStatusEnum } from '@smm/monthly-programs/enums/program-status.enum';
+import { catchError } from 'rxjs/operators';
 
 @Injectable()
 export class MonthlyProgramsService {

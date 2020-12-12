@@ -6,10 +6,12 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Participant, ParticipantSchema } from '@smm/participants/schemas/participant.schema';
 import { ParticipantsService } from '@smm/participants/participants.service';
 import { ParticipantsController } from '@smm/participants/participants.controller';
+import { ParticipantReservedEventHandler } from '@smm/participants/events/participant.reserved.event.handler';
 
 @Module({
   providers: [
-    ParticipantsService
+    ParticipantsService,
+    ParticipantReservedEventHandler
   ],
   imports: [
     MongooseModule.forFeature(

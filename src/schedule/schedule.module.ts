@@ -8,6 +8,7 @@ import { ScheduleBuilderService } from '@smm/schedule/schedule.builder.service';
 import { ReportModule } from '@smm/report/report.module';
 import { ProgramsModule } from '@smm/programs/programs.module';
 import { MonthlyProgramsModule } from '@smm/monthly-programs/monthly-programs.module';
+import { CqrsModule } from '@nestjs/cqrs';
 
 @Module({
   providers:[ScheduleBuilderService],
@@ -16,7 +17,8 @@ import { MonthlyProgramsModule } from '@smm/monthly-programs/monthly-programs.mo
     RegistryModule,
     ReportModule,
     ProgramsModule,
-    MonthlyProgramsModule
+    MonthlyProgramsModule,
+    CqrsModule
   ]
 })
 export class ScheduleModule {

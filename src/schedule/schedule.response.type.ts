@@ -10,6 +10,10 @@ export class ScheduleResponseType {
 
   @ApiProperty({type: () => Week})
   weeks: Week[];
+
+  name: string;
+
+  programId: string;
 }
 
 
@@ -36,8 +40,12 @@ export class Participant {
   @ApiProperty()
   mainName?: string;
 
+  mainId?: string;
+
   @ApiProperty()
   helperName?: string;
+
+  helperId?: string;
 
   @ApiProperty()
   task: string;

@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { shuffle } from '@smm/framework/arrays/suffle.array';
 import { ProgramsService } from '@smm/programs/programs.service';
+import { EventBus } from '@nestjs/cqrs';
+import { ParticipantReservedEvent } from '@smm/events/participant.reserved.event';
 
 @Injectable()
 export class ScheduleBuilderService {
@@ -17,6 +19,9 @@ export class ScheduleBuilderService {
 
   @Inject()
   private readonly programsService: ProgramsService;
+
+  @Inject()
+  private readonly eventBus: EventBus;
 
   createSchedule(programId: string, month: number): Observable<ScheduleResponseType> {
 
@@ -29,7 +34,9 @@ export class ScheduleBuilderService {
       const response = new ScheduleResponseType();
       response.weeks = [];
       response.success = false;
-      Logger.debug(monthCandidates);
+      response.programId = input.id;
+      response.name = `smm-${input.month}/${input.year}`;
+
       for (let w of input.weeks) {
         let week: Week = { date: w.date, rooms: [] };
         let mainRoom: Room = { roomId: 'MAIN_ROOM', participants: [] };
@@ -38,7 +45,7 @@ export class ScheduleBuilderService {
         for (let t of w.tasks) {
           let gender = monthCandidates.filter(candidate => candidate.gender === t.gender);
 
-          if(2 > gender.length) {
+          if (2 > gender.length) {
             throw new Error(`Not enough participants for ${t.name} - ${w.date}`);
           }
 
@@ -54,10 +61,14 @@ export class ScheduleBuilderService {
           monthCandidates = monthCandidates.filter(candidate => candidate.name != main1.name && candidate.name != main2.name);
 
           newParticipantMain.mainName = main1.name;
+          newParticipantMain.mainId = main1.id;
+          this.eventBus.publish(new ParticipantReservedEvent(main1.id, w.date));
           //newParticipantAux.mainName = main2.name;
 
           if (t.paired) {
             newParticipantMain.helperName = gender[2].name;
+            newParticipantMain.helperId = gender[2].id;
+            this.eventBus.publish(new ParticipantReservedEvent(gender[2].id, w.date));
             //newParticipantAux.helperName = gender[3].name;
 
             monthCandidates = monthCandidates.filter(candidate => candidate.name != gender[2].name && candidate.name != gender[3].name);

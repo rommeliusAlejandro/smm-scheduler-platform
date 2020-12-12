@@ -4,11 +4,11 @@
 import { Body, Controller, Inject, Param, Post } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { ScheduleRequestType } from '@smm/schedule/schedule.request.type';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { ScheduleResponseType } from '@smm/schedule/schedule.response.type';
 import { ScheduleBuilderService } from '@smm/schedule/schedule.builder.service';
 import { ReportBuilder } from '@smm/report/report.builder';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { MonthlyProgramsService } from '@smm/monthly-programs/monthly-programs.service';
 
 @ApiTags('Schedule module')
@@ -35,7 +35,8 @@ export class ScheduleController {
       map(response => {
         this.monthlyProgramService.create(response);
         return response;
-      }));
+      }),
+      catchError(err => throwError(err)));
   }
 
 }

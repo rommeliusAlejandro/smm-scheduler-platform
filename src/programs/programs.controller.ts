@@ -1,11 +1,11 @@
 /**
  * @author Rommel Loayza
  */
-import { Body, Controller, Get, Inject, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Inject, Param, Post, Put } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { Program } from '@smm/programs/schemas/program.schema';
 import { ProgramsService } from '@smm/programs/programs.service';
-import { NewProgramRequest } from '@smm/programs/programs.requests.types';
+import { NewProgramRequest, UpdateProgramRequest } from '@smm/programs/programs.requests.types';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Programs Controller')
@@ -29,5 +29,11 @@ export class ProgramsController {
   @Post()
   create(@Body() newProgram: NewProgramRequest): Observable<Program> {
     return this.programsService.create(newProgram);
+  }
+
+  @Put('/:id')
+  update(@Param('id') id: string,
+    @Body() program: UpdateProgramRequest): Observable<Program> {
+    return this.programsService.update(id, program.attributes);
   }
 }

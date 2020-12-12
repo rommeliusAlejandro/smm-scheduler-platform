@@ -40,3 +40,12 @@ export class WeekTask {
   @ApiProperty()
   paired: boolean;
 }
+
+export class UpdateProgramRequest {
+  @ApiProperty()
+  attributes: {
+    weeks: WeekTask,
+    month: number,
+    year: number
+  }
+}
