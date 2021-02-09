@@ -7,17 +7,23 @@ import { Participant, ParticipantSchema } from '@smm/participants/schemas/partic
 import { ParticipantsService } from '@smm/participants/participants.service';
 import { ParticipantsController } from '@smm/participants/participants.controller';
 import { ParticipantReservedEventHandler } from '@smm/participants/events/participant.reserved.event.handler';
+import { ParticipantsHistoryService } from '@smm/participants/participants.history.service';
+import { ParticipantHistory, ParticipantHistorySchema } from '@smm/participants/schemas/participant-history.schema';
 
 @Module({
   providers: [
     ParticipantsService,
-    ParticipantReservedEventHandler
+    ParticipantReservedEventHandler,
+    ParticipantsHistoryService
   ],
   imports: [
     MongooseModule.forFeature(
       [
         {
           name: Participant.name, schema: ParticipantSchema
+        },
+        {
+          name: ParticipantHistory.name, schema: ParticipantHistorySchema
         }
       ]
     )

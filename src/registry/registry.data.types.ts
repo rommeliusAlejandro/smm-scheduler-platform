@@ -11,14 +11,10 @@ export class Participant {
   active : boolean;
   history: Log[];
   age: string;
-  skills?: Skills;
+  skills?: string[];
 }
 
 export class Log {
   date: Date;
   room: string;
-}
-
-export class Skills {
-  [key: string]: number;
 }

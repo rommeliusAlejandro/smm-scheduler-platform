@@ -2,6 +2,7 @@
  * @author Rommel Loayza
  */
 import { ApiProperty } from '@nestjs/swagger';
+import { Prop } from '@nestjs/mongoose';
 
 export class CreateParticipantRequest {
 
@@ -28,6 +29,16 @@ export class UpdateParticipantRequests {
 }
 
 export class LogHistoryRequest {
-  date: Date;
+
+  @ApiProperty()
   room: string;
+
+  @ApiProperty()
+  date: Date;
+
+  @ApiProperty()
+  task: string;
+
+  @ApiProperty()
+  monthlyProgramId: string;
 }

@@ -36,6 +36,9 @@ export class Participant {
 
   @Prop()
   skills: string[];
+
+  @Prop()
+  reserved: boolean;
 }
 
 export const ParticipantSchema = SchemaFactory.createForClass(Participant);

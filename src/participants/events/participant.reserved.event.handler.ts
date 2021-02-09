@@ -13,12 +13,14 @@ export class ParticipantReservedEventHandler implements IEventHandler<Participan
   private readonly participantsService: ParticipantsService;
 
   handle(event: ParticipantReservedEvent) {
-    this.participantsService.logHistory(event.id, event.week)
-      .subscribe(
+    /*this.participantsService.logHistory(event.id, {
+      date: event.week,
+      room: event.roomId
+    }).subscribe(
         next => {
-          Logger.log(`${event.week} added as history for ${event.id}`);
+          Logger.log(`${event.week} | ${event.roomId} added as history for ${event.id}`);
         }
-      )
+      )*/
   }
 
 }

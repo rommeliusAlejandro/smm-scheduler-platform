@@ -11,6 +11,8 @@ import {
   UpdateParticipantRequests,
 } from '@smm/participants/participants.requests.types';
 import { ApiTags } from '@nestjs/swagger';
+import { ParticipantHistory } from '@smm/participants/schemas/participant-history.schema';
+import { ParticipantsHistoryService } from '@smm/participants/participants.history.service';
 
 @ApiTags('Participants Controller')
 @Controller('participants')
@@ -18,6 +20,9 @@ export class ParticipantsController {
 
   @Inject()
   private readonly participantsService: ParticipantsService;
+
+  @Inject()
+  private readonly participantsHistoryService: ParticipantsHistoryService;
 
   @Get()
   getAll(): Observable<Participant[]> {
@@ -46,10 +51,15 @@ export class ParticipantsController {
     return this.participantsService.update(id, updatedParticipant.attributes);
   }
 
-  @Put(':id/logHistory')
+  @Post(':id/logHistory')
   logHistory(@Param('id') id: string,
-             @Body() history: LogHistoryRequest): Observable<Participant> {
+             @Body() history: LogHistoryRequest): Observable<ParticipantHistory> {
     return this.participantsService.logHistory(id, history);
+  }
+
+  @Get(':id/history')
+  loadHistory(@Param('id') id: string): Observable<ParticipantHistory[]> {
+    return this.participantsHistoryService.loadParticipantHistory(id);
   }
 
 }

@@ -8,9 +8,18 @@ import { Model } from 'mongoose';
 import { from, Observable } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
 import { map, switchMap } from 'rxjs/operators';
+import { ParticipantHistory } from '@smm/participants/schemas/participant-history.schema';
+import { LogHistoryRequest } from '@smm/participants/participants.requests.types';
+import { ParticipantsHistoryService } from '@smm/participants/participants.history.service';
+import { AppLogger } from '@smm/framework/logger/app.logger';
 
 @Injectable()
 export class ParticipantsService {
+
+  @Inject()
+  private readonly participantHistoryService: ParticipantsHistoryService;
+
+  private readonly logger = AppLogger.getInstance(ParticipantsService.name);
 
   constructor(@InjectModel(Participant.name) private readonly participantModel: Model<ParticipantDocument>) {
   }
@@ -44,17 +53,31 @@ export class ParticipantsService {
     );
   }
 
-  logHistory(id: string, history: any): Observable<Participant> {
-    const participantObs = this.findOne(id);
-
-    return participantObs.pipe(
-      switchMap(item => {
-
-        let historyList = item.history;
-        historyList.push(history);
-        return this.update(id, { history: historyList });
-      }),
+  findActive(): Observable<Participant[]> {
+    return from(this.participantModel.find()
+      .where('active').equals(true)
+      .exec()
     );
+  }
+
+  logHistory(id: string, history: LogHistoryRequest): Observable<ParticipantHistory> {
+
+    const rawDate = new Date(history.date);
+    const year = rawDate.getFullYear();
+    const month = rawDate.getMonth();
+
+    this.logger.debug(`${year} -- ${month}`);
+
+    return  this.participantHistoryService.create({
+      participantId: id,
+      monthlyProgramId: history.monthlyProgramId,
+      date: history.date,
+      room: history.room,
+      task: history.task,
+      monthNumber: month,
+      year: year,
+      id: null
+    });
   }
 
 }

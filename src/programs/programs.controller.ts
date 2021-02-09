@@ -20,6 +20,11 @@ export class ProgramsController {
     return this.programsService.getAll();
   }
 
+  @Get('/:id')
+  findById(@Param('id') id: string): Observable<Program> {
+    return this.programsService.findById(id);
+  }
+
   @Get('/:field/:value')
   getByField(@Param('field') field: string,
              @Param('value') value: string): Observable<Program[]> {

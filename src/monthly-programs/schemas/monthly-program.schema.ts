@@ -14,6 +14,8 @@ export class Participant {
   exercise: number;
   mainName: string;
   helperName: string;
+  mainId: string;
+  helperId: string;
 }
 
 export class Room {
@@ -35,17 +37,14 @@ export class MonthlyProgram {
   @Prop({required: true})
   name: string;
 
-  @Prop()
-  mainId: string;
-
-  @Prop()
-  helperId: string;
-
   @Prop({type: Week})
   weeks: Week[];
 
   @Prop({required: true})
   status: string;
+
+  @Prop({required: true})
+  programId: string;
 
 }
 
