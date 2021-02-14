@@ -5,7 +5,7 @@ import { Inject, Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { ParticipantDocument, Participant } from '@smm/participants/schemas/participant.schema';
 import { Model } from 'mongoose';
-import { from, Observable } from 'rxjs';
+import { from, Observable, of } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
 import { map, switchMap } from 'rxjs/operators';
 import { Log } from '@smm/registry/registry.data.types';
@@ -40,6 +40,19 @@ export class ParticipantsHistoryService {
     return from(this.participantHistoryModel.find()
       .where('participantId').equals(participantId)
       .exec()
+    );
+  }
+  findByYearMonth(year: number, month: number): Observable<ParticipantHistory[]> {
+
+    return from(this.participantHistoryModel.find()
+      .and([
+        {
+          'year': year
+        },
+        {
+          'monthNumber': month
+        }
+      ]).exec()
     );
   }
 }

@@ -28,10 +28,10 @@ export class ScheduleController {
   schedule(@Body() input: ScheduleRequestType, @Param('month') month: number): Observable<ScheduleResponseType> {
 
     return this.builder.createSchedule(input.programId, month).pipe(
-      map(response => {
-        this.reportBuilder.build(response, month);
+      /*map(response => {
+        //this.reportBuilder.build(response, month);
         return response;
-      }),
+      }),*/
       map(response => {
         this.monthlyProgramService.create(response);
         return response;

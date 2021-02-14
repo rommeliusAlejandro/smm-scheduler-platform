@@ -1,7 +1,7 @@
 /**
  * @author Rommel Loayza
  */
-import { Body, Controller, Get, Inject, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Get, Inject, Param, Post, Put, Query } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { Participant } from '@smm/participants/schemas/participant.schema';
 import { ParticipantsService } from '@smm/participants/participants.service';
@@ -27,6 +27,15 @@ export class ParticipantsController {
   @Get()
   getAll(): Observable<Participant[]> {
     return this.participantsService.findAll();
+  }
+
+  @Get('candidates')
+  getCandidates(
+    @Query('year') year: number,
+    @Query('month') month: number,
+    @Query('gender') gender: string,
+  ): Observable<Participant[]> {
+    return this.participantsService.findCandidates(gender, year, month);
   }
 
   @Get(':id')

@@ -16,6 +16,7 @@ export class Participant {
   helperName: string;
   mainId: string;
   helperId: string;
+  gender: string;
 }
 
 export class Room {

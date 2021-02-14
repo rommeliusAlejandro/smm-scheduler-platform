@@ -30,9 +30,6 @@ export class ParticipantHistory {
   year: number;
 
   @Prop()
-  task: string;
-
-  @Prop()
   monthlyProgramId: string;
 }
 

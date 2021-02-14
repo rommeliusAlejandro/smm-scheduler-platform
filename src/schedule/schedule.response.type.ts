@@ -52,4 +52,7 @@ export class Participant {
 
   @ApiProperty()
   exercise: number;
+
+  @ApiProperty()
+  gender: string;
 }

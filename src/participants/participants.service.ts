@@ -5,9 +5,9 @@ import { Inject, Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { ParticipantDocument, Participant } from '@smm/participants/schemas/participant.schema';
 import { Model } from 'mongoose';
-import { from, Observable } from 'rxjs';
+import { from, merge, Observable } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
-import { map, switchMap } from 'rxjs/operators';
+import { map, mergeAll, mergeMap, switchMap } from 'rxjs/operators';
 import { ParticipantHistory } from '@smm/participants/schemas/participant-history.schema';
 import { LogHistoryRequest } from '@smm/participants/participants.requests.types';
 import { ParticipantsHistoryService } from '@smm/participants/participants.history.service';
@@ -53,6 +53,12 @@ export class ParticipantsService {
     );
   }
 
+  findByMany(query: any): Observable<Participant[]> {
+    return from(
+      this.participantModel.find().and(query).exec(),
+    );
+  }
+
   findActive(): Observable<Participant[]> {
     return from(this.participantModel.find()
       .where('active').equals(true)
@@ -73,11 +79,28 @@ export class ParticipantsService {
       monthlyProgramId: history.monthlyProgramId,
       date: history.date,
       room: history.room,
-      task: history.task,
       monthNumber: month,
       year: year,
       id: null
     });
+  }
+
+  findCandidates(gender: string, year: number, month: number): Observable<Participant[]> {
+    const participantsObs = this.findByMany([{'gender':gender},{'active': true},{'reserved': false}]);
+
+    if(month == 1){
+      year = year-1;
+    }
+
+    const historyLastMonth = this.participantHistoryService.findByYearMonth(year, month-2);
+
+    return participantsObs.pipe(mergeMap(candidates => {
+      return historyLastMonth.pipe(map(history =>{
+        return candidates.filter(ca => {
+          return null == history.find(h => h.participantId === ca.id)
+        })
+      }))
+    }));
   }
 
 }
