@@ -90,7 +90,10 @@ export class ParticipantsService {
 
     if(month == 1){
       year = year-1;
+      month = 11;
     }
+
+    this.logger.debug(`Looking for ${gender} -- ${year} -- ${month}`);
 
     const historyLastMonth = this.participantHistoryService.findByYearMonth(year, month-2);
 
