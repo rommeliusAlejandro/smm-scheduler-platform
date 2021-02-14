@@ -60,6 +60,11 @@ export class ParticipantsController {
     return this.participantsService.update(id, updatedParticipant.attributes);
   }
 
+  @Put(':id/reserve')
+  reserve(@Param('id') id: string): Observable<Participant> {
+    return this.participantsService.update(id, { 'reserved': true });
+  }
+
   @Post(':id/logHistory')
   logHistory(@Param('id') id: string,
              @Body() history: LogHistoryRequest): Observable<ParticipantHistory> {

@@ -39,4 +39,11 @@ export class ScheduleController {
       catchError(err => throwError(err)));
   }
 
+  @Post('/approve/:month')
+  approve(@Body() input: ScheduleResponseType, @Param('month') month: number): Observable<ScheduleResponseType> {
+
+    this.reportBuilder.build(input, month);
+    return of(input);
+  }
+
 }
