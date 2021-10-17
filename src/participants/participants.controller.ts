@@ -1,7 +1,7 @@
 /**
  * @author Rommel Loayza
  */
-import { Body, Controller, Get, Inject, Param, Post, Put, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Inject, Param, Post, Put, Query } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { Participant } from '@smm/participants/schemas/participant.schema';
 import { ParticipantsService } from '@smm/participants/participants.service';
@@ -58,6 +58,16 @@ export class ParticipantsController {
   update(@Param('id') id: string,
          @Body() updatedParticipant: UpdateParticipantRequests): Observable<Participant> {
     return this.participantsService.update(id, updatedParticipant.attributes);
+  }
+
+  @Post('/release')
+  release(): Observable<number> {
+    return this.participantsService.releaseParticipants();
+  }
+
+  @Delete(':id')
+  delete(@Param('id') id: string): Observable<Participant> {
+    return this.participantsService.delete(id);
   }
 
   @Put(':id/reserve')

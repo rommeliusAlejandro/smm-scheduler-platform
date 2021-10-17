@@ -5,9 +5,9 @@ import { Inject, Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { ParticipantDocument, Participant } from '@smm/participants/schemas/participant.schema';
 import { Model } from 'mongoose';
-import { from, merge, Observable } from 'rxjs';
+import { from, merge, Observable, throwError } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
-import { map, mergeAll, mergeMap, switchMap } from 'rxjs/operators';
+import { catchError, map, mergeAll, mergeMap, switchMap } from 'rxjs/operators';
 import { ParticipantHistory } from '@smm/participants/schemas/participant-history.schema';
 import { LogHistoryRequest } from '@smm/participants/participants.requests.types';
 import { ParticipantsHistoryService } from '@smm/participants/participants.history.service';
@@ -42,6 +42,12 @@ export class ParticipantsService {
   update(id: string, attributes: any): Observable<Participant> {
     return from(
       this.participantModel.findOneAndUpdate({ id: id }, attributes, { new: true }),
+    );
+  }
+
+  delete(id: string): Observable<Participant> {
+    return from(
+      this.participantModel.findOneAndRemove( { id: id})
     );
   }
 
@@ -83,6 +89,17 @@ export class ParticipantsService {
       year: year,
       id: null
     });
+  }
+
+  releaseParticipants(): Observable<number> {
+    return from(this.participantModel.updateMany(
+      { 'active': true}, { 'reserved': false}, {multi: true})
+      ).pipe(
+      map(response => {
+        return response.nModified;
+      }),
+      catchError(err => throwError(err))
+    )
   }
 
   findCandidates(gender: string, year: number, month: number): Observable<Participant[]> {
