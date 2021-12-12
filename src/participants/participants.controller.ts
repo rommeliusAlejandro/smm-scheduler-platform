@@ -31,11 +31,9 @@ export class ParticipantsController {
 
   @Get('candidates')
   getCandidates(
-    @Query('year') year: number,
-    @Query('month') month: number,
     @Query('gender') gender: string,
   ): Observable<Participant[]> {
-    return this.participantsService.findCandidates(gender, year, month);
+    return this.participantsService.findCandidates(gender);
   }
 
   @Get(':id')
@@ -84,6 +82,11 @@ export class ParticipantsController {
   @Get(':id/history')
   loadHistory(@Param('id') id: string): Observable<ParticipantHistory[]> {
     return this.participantsHistoryService.loadParticipantHistory(id);
+  }
+
+  @Post('/refreshHistory')
+  refreshHistory(): Observable<ParticipantHistory[]> {
+    return this.participantsHistoryService.refreshHistory();
   }
 
 }

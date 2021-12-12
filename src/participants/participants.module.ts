@@ -9,6 +9,7 @@ import { ParticipantsController } from '@smm/participants/participants.controlle
 import { ParticipantReservedEventHandler } from '@smm/participants/events/participant.reserved.event.handler';
 import { ParticipantsHistoryService } from '@smm/participants/participants.history.service';
 import { ParticipantHistory, ParticipantHistorySchema } from '@smm/participants/schemas/participant-history.schema';
+import { MonthlyProgramsModule } from '@smm/monthly-programs/monthly-programs.module';
 
 @Module({
   providers: [
@@ -26,7 +27,8 @@ import { ParticipantHistory, ParticipantHistorySchema } from '@smm/participants/
           name: ParticipantHistory.name, schema: ParticipantHistorySchema
         }
       ]
-    )
+    ),
+    MonthlyProgramsModule
   ],
   exports: [
     ParticipantsService
