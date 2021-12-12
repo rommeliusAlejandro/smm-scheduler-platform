@@ -36,6 +36,7 @@ export class ScheduleBuilderService {
       for (let w of input.weeks) {
         let week: Week = { date: w.date, rooms: [] };
         let mainRoom: Room = { roomId: 'MAIN_ROOM', participants: [] };
+        let secondRoom: Room = { roomId: 'SECOND_ROOM', participants: [] };
 
         for (let t of w.tasks) {
           let newParticipantMain: Participant = {
@@ -45,13 +46,23 @@ export class ScheduleBuilderService {
             mainName: '[SELECT A MAIN PARTICIPANT]',
           };
 
+          let newParticipantMainTwo: Participant = {
+            gender: t.gender,
+            task: t.name,
+            exercise: t.exercise,
+            mainName: '[SELECT A MAIN PARTICIPANT]',
+          };
+
           if (t.paired) {
             newParticipantMain.helperName = '[SELECT THE HELPER]';
+            newParticipantMainTwo.helperName = '[SELECT THE HELPER]';
           }
 
           mainRoom.participants.push(newParticipantMain);
+          secondRoom.participants.push(newParticipantMainTwo);
         }
         week.rooms.push(mainRoom);
+        week.rooms.push(secondRoom);
         response.weeks.push(week);
       }
 

@@ -13,7 +13,7 @@ export enum ReportFormats {
   SPEECH = 'Discurso',
   OTHER = 'Otro',
   MAIN_ROOM = 'Primera Sala',
-  AUX_ROOM_1 = 'Segunda Sala'
+  SECOND_ROOM = 'Segunda Sala'
 }
 
 export function formatDateToSpanish(date: string): string {

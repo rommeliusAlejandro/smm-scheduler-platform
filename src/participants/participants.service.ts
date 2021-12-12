@@ -103,9 +103,10 @@ export class ParticipantsService {
   }
 
   findCandidates(gender: string, year: number, month: number): Observable<Participant[]> {
-    const participantsObs = this.findByMany([{'gender':gender},{'active': true},{'reserved': false}]);
+    return  this.findByMany([{'gender':gender},{'active': true},{'reserved': false}]);
+    //const participantsObs = this.findByMany([{'gender':gender},{'active': true},{'reserved': false}]);
 
-    if(month == 1){
+    /*if(month == 1){
       year = year-1;
       month = 11;
     }
@@ -120,7 +121,7 @@ export class ParticipantsService {
           return null == history.find(h => h.participantId === ca.id)
         })
       }))
-    }));
+    }));*/
   }
 
 }
