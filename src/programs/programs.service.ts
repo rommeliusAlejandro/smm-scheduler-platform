@@ -7,7 +7,6 @@ import { Model } from 'mongoose';
 import { Program, ProgramDocument } from '@smm/programs/schemas/program.schema';
 import { from, Observable } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
-import { Participant } from '@smm/participants/schemas/participant.schema';
 
 @Injectable()
 export class ProgramsService {
@@ -23,7 +22,7 @@ export class ProgramsService {
   }
 
   getAll(): Observable<Program[]> {
-    return from(this.programModel.find().exec());
+    return from(this.programModel.find().sort({'month': 1}).exec());
   }
 
   findById(id: string): Observable<Program> {
