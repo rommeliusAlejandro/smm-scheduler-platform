@@ -39,6 +39,8 @@ export class Participant {
 
   @Prop()
   reserved: boolean;
+
+  last?: Date;
 }
 
 export const ParticipantSchema = SchemaFactory.createForClass(Participant);

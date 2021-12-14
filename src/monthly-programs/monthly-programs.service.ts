@@ -2,14 +2,13 @@
  * @author Rommel Loayza
  */
 
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from "mongoose";
-import { from, Observable, throwError } from 'rxjs';
+import { Model } from 'mongoose';
+import { from, Observable } from 'rxjs';
 import { MonthlyProgram, MonthlyProgramDocument } from '@smm/monthly-programs/schemas/monthly-program.schema';
 import { v4 as uuidv4 } from 'uuid';
 import { ProgramStatusEnum } from '@smm/monthly-programs/enums/program-status.enum';
-import { catchError } from 'rxjs/operators';
 
 @Injectable()
 export class MonthlyProgramsService {
@@ -26,7 +25,7 @@ export class MonthlyProgramsService {
   }
 
   findAll(): Observable<MonthlyProgram[]> {
-    return from(this.monthlyProgramDocumentModel.find().exec());
+    return from(this.monthlyProgramDocumentModel.find().sort({'name': 1}).exec());
   }
 
   findOne(id: string): Observable<MonthlyProgram> {
