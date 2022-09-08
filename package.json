@@ -28,7 +28,7 @@
     "@nestjs/mongoose": "7.1.2",
     "@nestjs/platform-express": "^7.0.0",
     "@nestjs/swagger": "^4.5.12",
-    "excel4node": "^1.7.2",
+    "excel4node": "^1.8.0",
     "moment": "^2.27.0",
     "mongoose": "5.10.19",
     "reflect-metadata": "^0.1.13",
