@@ -17,7 +17,7 @@ import { MonthlyProgramsModule } from '@smm/monthly-programs/monthly-programs.mo
     ConfigModule.forRoot({
       load: [AppServiceConfig]
     }),
-    MongooseModule.forRoot('mongodb://192.168.1.66/smmtool'),
+    MongooseModule.forRoot('mongodb://192.168.1.73/smmtool'),
     ScheduleModule,
     RegistryModule,
     ReportModule,

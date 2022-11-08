@@ -61,6 +61,19 @@ export class ParticipantsHistoryService {
     );
   }
 
+  findByYear(year: number): Observable<ParticipantHistory[]> {
+
+    return from(this.participantHistoryModel.find()
+      .and([
+        {
+          'year': year,
+        }
+      ])
+      .sort({'date': 'asc'})
+        .exec(),
+    );
+  }
+
   refreshHistory(): Observable<ParticipantHistory[]> {
     return from(this.participantHistoryModel.deleteMany({})).pipe(
       switchMap(() => {

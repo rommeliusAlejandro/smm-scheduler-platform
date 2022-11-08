@@ -22,6 +22,7 @@ async function bootstrap() {
 
   Logger.log(`Application started at port ${port}`);
   app.enableCors();
-  await app.listen(port);
+  const server = await app.listen(port);
+  server.setTimeout(1800000);
 }
 bootstrap();

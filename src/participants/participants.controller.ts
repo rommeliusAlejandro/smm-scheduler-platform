@@ -13,6 +13,7 @@ import {
 import { ApiTags } from '@nestjs/swagger';
 import { ParticipantHistory } from '@smm/participants/schemas/participant-history.schema';
 import { ParticipantsHistoryService } from '@smm/participants/participants.history.service';
+import { map } from 'rxjs/operators';
 
 @ApiTags('Participants Controller')
 @Controller('participants')
@@ -86,7 +87,19 @@ export class ParticipantsController {
 
   @Post('/refreshHistory')
   refreshHistory(): Observable<ParticipantHistory[]> {
+    console.log('Refreshing participants history...');
     return this.participantsHistoryService.refreshHistory();
+  }
+
+  @Get('/reports/general')
+  report(): Observable<string> {
+    console.log('Generating Report...');
+    return this.participantsService.buildReport()
+      .pipe(
+        map(total => {
+          return `${total} participantes.`;
+        }),
+      );
   }
 
 }

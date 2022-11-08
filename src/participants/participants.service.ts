@@ -12,12 +12,16 @@ import { ParticipantHistory } from '@smm/participants/schemas/participant-histor
 import { LogHistoryRequest } from '@smm/participants/participants.requests.types';
 import { ParticipantsHistoryService } from '@smm/participants/participants.history.service';
 import { AppLogger } from '@smm/framework/logger/app.logger';
+import { ParticipantsReportBuilderService } from '@smm/participants/services/participants.report.builder.service';
 
 @Injectable()
 export class ParticipantsService {
 
   @Inject()
   private readonly participantHistoryService: ParticipantsHistoryService;
+
+  @Inject()
+  private readonly participantsReportBuilder: ParticipantsReportBuilderService;
 
   private readonly logger = AppLogger.getInstance(ParticipantsService.name);
 
@@ -56,6 +60,18 @@ export class ParticipantsService {
     search[field] = value;
     return from(
       this.participantModel.find(search).exec(),
+    );
+  }
+
+  findBySorted(field: string, value: string, sort: string, dir: string): Observable<Participant[]> {
+    const search = {};
+    search[field] = value;
+
+    const sortArg = {};
+    sortArg[sort] = dir;
+
+    return from(
+      this.participantModel.find(search).sort(sortArg).exec(),
     );
   }
 
@@ -126,7 +142,7 @@ export class ParticipantsService {
                   gender: participant.gender,
                   active: participant.active,
                   reserved: participant.reserved,
-                  skills: participant.skills
+                  skills: participant.skills,
                 };
               }),
             );
@@ -134,19 +150,34 @@ export class ParticipantsService {
           toArray(),
           map(participants => {
             return participants.sort((a, b) => {
-              if(a.last > b.last) {
+              if (a.last > b.last) {
                 return 1;
               }
 
-              if(a.last < b.last) {
+              if (a.last < b.last) {
                 return -1;
               }
               return 0;
-            })
-          })
+            });
+          }),
         );
       }),
     );
+  }
+
+  buildReport(): Observable<number> {
+    return this.findBySorted('active', 'true', 'name', 'asc')
+      .pipe(
+        switchMap((participants: Participant[]) => {
+          return this.participantHistoryService.findByYear(2022)
+            .pipe(
+              map(participantsHistory => {
+                this.participantsReportBuilder.build(participants, participantsHistory);
+                return participants.length;
+              }),
+            );
+        }),
+      );
   }
 
 }

@@ -10,12 +10,14 @@ import { ParticipantReservedEventHandler } from '@smm/participants/events/partic
 import { ParticipantsHistoryService } from '@smm/participants/participants.history.service';
 import { ParticipantHistory, ParticipantHistorySchema } from '@smm/participants/schemas/participant-history.schema';
 import { MonthlyProgramsModule } from '@smm/monthly-programs/monthly-programs.module';
+import { ParticipantsReportBuilderService } from '@smm/participants/services/participants.report.builder.service';
 
 @Module({
   providers: [
     ParticipantsService,
     ParticipantReservedEventHandler,
-    ParticipantsHistoryService
+    ParticipantsHistoryService,
+    ParticipantsReportBuilderService
   ],
   imports: [
     MongooseModule.forFeature(
